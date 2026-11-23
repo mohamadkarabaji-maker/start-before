@@ -38,7 +38,7 @@ function applyLanguage(lang) {
  opts.forEach(([id,arr])=>{const el=ids(id), old=el.selectedIndex;el.innerHTML='';arr.forEach((v,i)=>{const o=document.createElement('option');o.textContent=v;o.value=v;el.appendChild(o)});el.selectedIndex=Math.min(old,arr.length-1)});
  ids('privacyHint').textContent=t.privacy; ids('submitButton').textContent=t.submit;
  ids('reportTitle').textContent=t.report; ids('budgetCaption').textContent=t.budgetCap; ids('stageCaption').textContent=t.stageCap; ids('nextCaption').textContent=t.nextCap; ids('nextCaption').nextElementSibling.textContent=t.next;
- ['s1','s2','s3','s4'].forEach((k,i)=>{ids('section'+(i+1)+'Title').textContent=t[k];ids('section'+(i+1)+'Title').nextElementSibling.textContent=t['p'+(i+1)]});
+ 
  document.querySelector('.notice').textContent=t.notice;
  const buttons=ids('result').querySelectorAll('.form-actions button'); buttons[0].textContent=t.print; buttons[1].textContent=t.again;
 }
